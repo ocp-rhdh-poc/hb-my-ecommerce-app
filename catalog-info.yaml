@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "hb-my-ecommerce-app"
+  description: "hb-my-ecommerce-app for Red Hat Developer Hub"
+  annotations:
+    github.com/project-slug: "ocp-rhdh-poc/hb-my-ecommerce-app"
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-namespace: "demo"
+    backstage.io/kubernetes-id: "hb-my-ecommerce-app"
+    janus-idp.io/tekton: "hb-my-ecommerce-app"
+    argocd/app-selector: "app.kubernetes.io/instance=hb-my-ecommerce-app-bootstrap"
+  links:
+    - title: Documentation
+      url: "https://github.com/ocp-rhdh-poc/hb-my-ecommerce-app"
+    - url: "https://devspaces.apps.67c1045bd8856f9bb04f2985.am1.techzone.ibm.com/#https://github.com/ocp-rhdh-poc/hb-my-ecommerce-app"
+      title: OpenShift Dev Spaces (VS Code)
+      icon: web
+    - url: "https://ibmdevsandbox-instanaibm.instana.io/#/application;appId=cHwduLF4SGGyDTEpC6VFgg"
+      title: Instana Monitoring
+      icon: web
+  tags:
+    - microservice
+    - openshift
+    - argocd
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/rhdh"
